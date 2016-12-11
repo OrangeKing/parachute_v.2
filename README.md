@@ -1,42 +1,68 @@
-# Ruby on Rails Tutorial: sample application
+# Parachute project
+This is an application for Bachelor of Science Thesis Project 
 
-This is the sample application for the
-[*Ruby on Rails Tutorial:
-Learn Web Development with Rails*](http://www.railstutorial.org/)
-by [Michael Hartl](http://www.michaelhartl.com/). You can use this reference implementation to help track down errors if you end up having trouble with code in the tutorial. In particular, as a first debugging check I suggest getting the test suite to pass on your local machine:
+### Author & Support
+Norbert Kapica
+
+Wroclaw University of Technology
+
+Faculty of Electronics
+
+## Getting started
+
+To get started with the app, clone the repo and then install the needed gems:
 
 ```
-$ cd ~/workspace
-$ git clone https://github.com/mhartl/sample_app_3rd_edition.git
-$ cd sample_app_3rd_edition
 $ bundle install --without production
+```
+
+Next, migrate the database:
+
+```
 $ bundle exec rake db:migrate
-$ bundle exec rake test
 ```
 
-The repository also has chapter-specific branches with the state of the code at the end of each chapter. You can view them as follows:
+Finally, run the test suite to verify that everything is working correctly:
 
 ```
-$ git branch --all
-  .
-  .
-  .
-  remotes/origin/account-activation-password-reset
-  remotes/origin/filling-in-layout
-  remotes/origin/following-users
-  remotes/origin/log-in-log-out
-  remotes/origin/master
-  remotes/origin/modeling-users
-  remotes/origin/sign-up
-  remotes/origin/static-pages
-  remotes/origin/updating-users
-  remotes/origin/user-microposts
+$ rails test
 ```
 
-To check out one of these chapter-specific branches, just use `git checkout` followed by the name without `remotes/origin/`:
+If the test suite passes, you'll be ready to run the app in a local server:
 
 ```
-$ git checkout log-in-log-out
+$ rails server
 ```
 
-This should help you track down any discrepancies between your code and the code in the tutorial.
+# Change Log
+All notable changes to this project will be documented below.
+
+The format is based on [Keep a Changelog](http://keepachangelog.com/) 
+and this project adheres to [Semantic Versioning](http://semver.org/).
+
+## [Unreleased]
+- TODO: Sign up functionality
+
+## [0.0.5] - 2015-11-26
+### Added
+- Layout complete with linking.
+
+## [0.0.4] - 2015-11-24
+### Added
+- Basic Bootstrap layout implemented.
+
+## [0.0.3] - 2015-11-21
+### Added
+- Advanced integration test implemented.
+- Advanced setup ready.
+
+## [0.0.2] - 2015-11-15
+### Added
+- App deploy-ready.
+- Abstract data modelling complete (sql based).
+
+## [0.0.1] - 2015-11-13
+### Added
+- Initialized repository.
+- Basic app framework added.
+- App structure and development enviroment verified.

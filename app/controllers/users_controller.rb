@@ -79,4 +79,17 @@ class UsersController < ApplicationController
     def admin_user
       redirect_to(root_url) unless current_user.admin?
     end
+
+  #mock for imdb api
+  def film
+    require "net/http"
+    require "uri"
+    @uri = URI.parse("http://www.omdbapi.com/?t=Godfather&y=&plot=short&r=json")
+    @http = Net::HTTP.new(uri.host, uri.port)
+    @request = Net::HTTP:Get.new(uri.request_uri)
+    @response = http.request(request)
+
+    puts response.body
+  end
+  
 end

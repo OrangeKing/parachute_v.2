@@ -1,0 +1,56 @@
+== README
+
+* Ruby version
+
+Rails version	4.2.6
+Ruby version	2.3.1-p112 (x86_64-linux)
+RubyGems version	2.5.1
+Rack version	1.6.5
+JavaScript Runtime	Node.js (V8)
+Middleware	
+
+    Rack::Sendfile
+    ActionDispatch::Static
+    Rack::Lock
+    #<ActiveSupport::Cache::Strategy::LocalCache::Middleware:0x00560db7c68728>
+    Rack::Runtime
+    Rack::MethodOverride
+    ActionDispatch::RequestId
+    Rails::Rack::Logger
+    ActionDispatch::ShowExceptions
+    WebConsole::Middleware
+    ActionDispatch::DebugExceptions
+    ActionDispatch::RemoteIp
+    ActionDispatch::Reloader
+    ActionDispatch::Callbacks
+    ActiveRecord::Migration::CheckPending
+    ActiveRecord::ConnectionAdapters::ConnectionManagement
+    ActiveRecord::QueryCache
+    ActionDispatch::Cookies
+    ActionDispatch::Session::CookieStore
+    ActionDispatch::Flash
+    ActionDispatch::ParamsParser
+    Rack::Head
+    Rack::ConditionalGet
+    Rack::ETag
+
+Application root	~/parachute
+Environment	development
+Database adapter	psql
+Database schema version	0
+
+* System dependencies
+
+* Configuration
+
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...

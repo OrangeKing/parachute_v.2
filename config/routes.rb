@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   get    'login'   => 'sessions#new'
   post   'login'   => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'
+  get  '/film',  to: 'users#film'
+
   resources :users do
     member do
       get :following, :followers

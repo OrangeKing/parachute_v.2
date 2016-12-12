@@ -67,6 +67,8 @@ GEM
     columnize (0.9.0)
     debug_inspector (0.0.2)
     debugger-linecache (1.2.0)
+    domain_name (0.5.20161129)
+      unf (>= 0.0.5, < 1.0.0)
     erubis (2.7.0)
     excon (0.45.4)
     execjs (2.6.0)
@@ -196,7 +198,15 @@ GEM
     guard-minitest (2.3.1)
       guard (~> 2.0)
       minitest (>= 3.0)
+    http-cookie (1.0.3)
+      domain_name (~> 0.5)
+    httparty (0.14.0)
+      multi_xml (>= 0.5.2)
     i18n (0.7.0)
+    imdb (0.8.1)
+      nokogiri (>= 1.6.0)
+    imdb_party (0.8.0)
+      httparty
     inflecto (0.0.2)
     ipaddress (0.8.0)
     jbuilder (2.2.3)
@@ -230,12 +240,17 @@ GEM
       minitest (>= 5.0)
       ruby-progressbar
     multi_json (1.11.2)
+    multi_xml (0.6.0)
     nenv (0.2.0)
+    netrc (0.11.0)
     nokogiri (1.6.6.4)
       mini_portile (~> 0.6.0)
     notiffany (0.0.8)
       nenv (~> 0.1)
       shellany (~> 0.0)
+    omdb (1.0.4)
+      json
+      rest-client
     pg (0.17.1)
     pry (0.10.3)
       coderay (~> 1.1.0)
@@ -279,6 +294,10 @@ GEM
     rb-inotify (0.9.5)
       ffi (>= 0.5.0)
     rdoc (4.2.0)
+    rest-client (2.0.0)
+      http-cookie (>= 1.0.2, < 2.0)
+      mime-types (>= 1.16, < 4.0)
+      netrc (~> 0.8)
     ruby-progressbar (1.7.5)
     sass (3.4.19)
     sass-rails (5.0.2)
@@ -311,6 +330,9 @@ GEM
     uglifier (2.5.3)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    unf (0.1.4)
+      unf_ext
+    unf_ext (0.0.7.2)
     web-console (2.0.0.beta3)
       activemodel (~> 4.0)
       binding_of_caller (= 0.7.3.pre1)
@@ -332,11 +354,14 @@ DEPENDENCIES
   faker (= 1.4.2)
   fog (= 1.36.0)
   guard-minitest (= 2.3.1)
+  imdb (~> 0.8)
+  imdb_party (~> 0.8.0)
   jbuilder (= 2.2.3)
   jquery-rails (= 4.0.3)
   mini_backtrace (= 0.1.3)
   mini_magick (= 3.8.0)
   minitest-reporters (= 1.0.5)
+  omdb
   pg (= 0.17.1)
   puma (= 3.1.0)
   rails (= 4.2.2)
@@ -351,4 +376,4 @@ DEPENDENCIES
   will_paginate (= 3.0.7)
 
 BUNDLED WITH
-   1.11.2
+   1.13.6

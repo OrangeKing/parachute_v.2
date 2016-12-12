@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'movie/find'
+
   root                'static_pages#home'
   get    'help'    => 'static_pages#help'
   get    'about'   => 'static_pages#about'
@@ -8,6 +10,7 @@ Rails.application.routes.draw do
   post   'login'   => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'
   get  '/film',  to: 'users#film'
+  get  '/movie',  to: 'movie#find'
 
   resources :users do
     member do

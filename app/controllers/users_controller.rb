@@ -3,6 +3,9 @@ class UsersController < ApplicationController
                                         :following, :followers]
   before_action :correct_user,   only: [:edit, :update]
   before_action :admin_user,     only: :destroy
+
+  require 'omdb'
+  @sample = Omdb::Api.new.fetch('The Godfather: Part II')
   
   def index
     @users = User.paginate(page: params[:page])
@@ -80,10 +83,7 @@ class UsersController < ApplicationController
       redirect_to(root_url) unless current_user.admin?
     end
 
-  #mock for imdb api
   def film
-    #sample = "Imdb::Movie.new("0095016")"
   end
   
 end
-231

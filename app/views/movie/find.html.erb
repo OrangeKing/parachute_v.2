@@ -1,5 +1,39 @@
-<h1>Movie#find</h1>
+<h1>Search for a movie</h1>
 
-<%  @movie = @database.find_by_title("The Godfather") %>
-<%=  @movie.first %>
-<%=  @sample.trailer_url %>
+	<script>
+	function watched() {
+		document.getElementById("butn").className = "btn btn-success"
+		document.getElementById("butn").text = "Watched!"
+	}
+	</script>
+
+	<div class="col-md-6">
+		<b><%= @title %></b>
+		<br>
+		<b>Director:</b> <%= @director %>
+		<br>
+		<b>Cast:</b> <%= @actors %>
+		<br>
+		<b>Summary:</b> <%= @plot %>
+		<br>
+		<b>Genre:</b><%= @genre %>
+		<br>
+		<img src="<%= @poster %>" alt="Poster" height="168" width="168">
+		<br>
+		<br>
+
+ 		<p><a class="btn btn-default" id="butn" role="button" onclick="watched();">Mark as watched</a></p>	
+
+	</div>
+
+	<div class="col-md-6">
+
+	<%= form_tag("/movie", :method => "get") do %>
+		<%= label_tag(:title, "Movie title:") %>
+		<%= text_field_tag(:title) %>
+		<%= label_tag(:year, "Movie Year:") %>
+		<%= text_field_tag(:year) %>
+		<%= submit_tag("Search") %>
+	<% end %>
+	
+	</div>
